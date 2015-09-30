@@ -48,7 +48,7 @@ var ReactFastAndLazy = React.createClass({
     }
   },
   render () {
-    return <div> {this.state && this.state.isVisible ? this.props.children : ''} </div>
+    return (<div> {this.state && this.state.isVisible ? this.props.children : ''} </div>);
   }
 });
 
