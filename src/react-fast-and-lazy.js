@@ -48,8 +48,9 @@ var ReactFastAndLazy = React.createClass({
     }
   },
   render () {
-    return (<div> {this.state && this.state.isVisible ? this.props.children : ''} </div>);
-  }
+    return React.createElement("div", {},
+            this.state && this.state.isVisible ? this.props.children : ''
+    )
 });
 
 module.exports = ReactFastAndLazy;
