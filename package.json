@@ -1,0 +1,24 @@
+{
+  "name": "react-fast-and-lazy",
+  "version": "1.0.0",
+  "description": "React lazy loading container which does not break performance",
+  "main": "./src/react-fast-and-lazy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LibertyGlobal/react-fast-and-lazy.git"
+  },
+  "keywords": [
+    "lazy",
+    "react",
+    "fast"
+  ],
+  "author": "PixelsCommander <denis.radin@gmail.com> (http://pixelscommander.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LibertyGlobal/react-fast-and-lazy/issues"
+  },
+  "homepage": "https://github.com/LibertyGlobal/react-fast-and-lazy#readme"
+}
