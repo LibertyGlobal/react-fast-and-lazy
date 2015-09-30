@@ -1,6 +1,6 @@
 {
   "name": "react-fast-and-lazy",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "React lazy loading container which does not break performance",
   "main": "./src/react-fast-and-lazy.js",
   "scripts": {

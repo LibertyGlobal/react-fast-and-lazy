@@ -38,7 +38,7 @@ var ReactFastAndLazy = React.createClass({
             });
         }
     },
-    componentDidMount: function {
+    componentDidMount: function () {
         var node = this.getDOMNode();
 
         if (!isListenerSet) {
@@ -60,8 +60,8 @@ var ReactFastAndLazy = React.createClass({
             componentsList.splice(indexOfComponent, 1);
         }
     },
-    render()
-    {
+
+    render: function () {
         return React.createElement("div", {},
             this.state && this.state.isVisible ? this.props.children : ''
         );
