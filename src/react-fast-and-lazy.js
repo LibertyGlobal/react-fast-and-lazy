@@ -62,9 +62,16 @@ var ReactFastAndLazy = React.createClass({
     },
 
     render: function () {
-        return React.createElement("div", {},
-            this.state && this.state.isVisible ? this.props.children : ''
-        );
+        if (this.state && this.state.isVisible) {
+            console.log(this.props.children.length);
+            if (this.props.children.length === undefined || this.props.children.length === 1) {
+                return this.props.children;
+            } else {
+                return React.createElement("div", {}, this.props.children);
+            }
+        } else {
+            return React.createElement("div", {});
+        }
     }
 });
 
