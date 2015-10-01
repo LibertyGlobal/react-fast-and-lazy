@@ -63,7 +63,6 @@ var ReactFastAndLazy = React.createClass({
 
     render: function () {
         if (this.state && this.state.isVisible) {
-            console.log(this.props.children.length);
             if (this.props.children.length === undefined || this.props.children.length === 1) {
                 return this.props.children;
             } else {
