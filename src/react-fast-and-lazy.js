@@ -23,7 +23,22 @@ var getScrollTop = function () {
         D = (D.clientHeight) ? D : B;
         return D.scrollTop;
     }
-}
+};
+
+var debounce = function(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
 
 var ReactFastAndLazy = React.createClass({
     updateVisibility: function () {
@@ -42,7 +57,7 @@ var ReactFastAndLazy = React.createClass({
         var node = this.getDOMNode();
 
         if (!isListenerSet) {
-            window.addEventListener('scroll', updateListVisibility);
+            window.addEventListener('scroll', debounce(updateListVisibility, 200));
             isListenerSet = true;
         }
 
